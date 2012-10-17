@@ -1,0 +1,7 @@
+
+<h2>Top Selling <?php echo (isset($this->brand)) ?  ucfirst($this->brand): ''; ?> <?php echo ucfirst($this->producttype); ?></h2>
+
+<p><?php echo count($this->result); ?> Results Found.</p> 
+<br/>
+<?php echo $this->ShowAllAmazonResults($this->result, array('class'=>'amazonResults')); ?>
+
