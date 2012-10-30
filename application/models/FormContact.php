@@ -13,6 +13,8 @@ class Application_Model_FormContact extends Zend_Form
         
         $name = new Zend_Form_Element_Text('name');
         $name->setAttrib('size', 40);
+        $name->setAttrib('placeholder', 'Your name...');
+        $name->setAttrib('required', 'true');
         $name->setRequired(true);
         $name->addErrorMessage('Please Enter Your Name!');
         $name->removeDecorator('label');
@@ -21,6 +23,8 @@ class Application_Model_FormContact extends Zend_Form
         
         $email = new Zend_Form_Element_Text('email');
         $email->setAttrib('size', 40);
+        $email->setAttrib('placeholder', 'Your Email...');
+        $email->setAttrib('required', 'true');
         $email->setRequired(true);
         $email->addErrorMessage('Please provide a valid Email Address!');
         $email->addValidator('EmailAddress');
@@ -29,6 +33,8 @@ class Application_Model_FormContact extends Zend_Form
         $email->removeDecorator('Errors');
         
         $message = new Zend_Form_Element_Textarea('message');
+        $message->setAttrib('placeholder', 'Your message...');
+        $message->setAttrib('required', 'true');
         $message->setRequired(true);
         $message->setAttrib('class', 'formContactMessage');
         $message->addErrorMessage('Please Enter a Message!');

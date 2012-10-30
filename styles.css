@@ -1,9 +1,9 @@
-/* 
+/* **************************************
     Document   : styles
     Created on : Sep 24, 2012, 1:13:50 AM
     Author     : Vishaan Tiwarie
-    Description:
-*/
+    Description: Global styles
+*****************************************/
 
 
 
@@ -23,7 +23,7 @@ CSS LAYOUT
 
 a
 {
-  color:red;  
+    color:red;  
 }
 
 .quickBrowseDiv
@@ -37,7 +37,7 @@ h2
     color:black;
     font-size:30px;
     text-align:center;
-    padding-bottom:20px;
+    padding:20px 0;
 }
 
 h3
@@ -48,23 +48,18 @@ h3
     border:1px black solid;
     background-color:white;
     margin-top:30px;
-
 }
 
 h4
 {
     color:red;
-    padding:10px 0
-
+    padding:10px;
+    text-align:center;
 }
 
-html
+html, body
 {
     background-color:white;
-}
-
-body
-{
 }
 
 #container
@@ -90,7 +85,6 @@ HEADER
     font-size:25px;
     margin:auto;
     background-image:url('images/allstuffcomputerslogo.gif');
-
 }
 
 #header .banner
@@ -99,7 +93,6 @@ HEADER
     font-size:20px;
     width:70%;
     height:100px;
-
 }
 
 #header .navLinks
@@ -108,6 +101,7 @@ HEADER
     height:43px;
     position:relative;
     clear:both;
+    background-color:red;
 }
 
 #header .navLinks ul
@@ -116,16 +110,14 @@ HEADER
     height:43px;
     margin:0 auto;
     list-style-type:none;
-
-   
 }
 
 #header .navLinks ul li 
 {
     float:left;
     position:relative;
-
 }
+
 #header .navLinks ul li a
 {
     display:block;    
@@ -144,7 +136,6 @@ HEADER
 #header .navLinks ul li a:hover
 {
     color:rgb(255, 40, 40);
-    
 }
 
 #header .navLinks ul li ul
@@ -157,7 +148,6 @@ HEADER
     position:absolute;
     display:block;
 }
-
 
 #header .navLinks ul li:hover ul li a
 {
@@ -180,7 +170,6 @@ HEADER
     font-size:13px;
     padding:0;
     line-height:150%;
-
 }
 
 /***************************************
@@ -190,7 +179,7 @@ CONTENT
 {
     float:right;
     min-height:700px;
-    padding:2% 5% 5% 5%;
+    padding:0 5% 5% 5%;
     width:70%;
 }
 
@@ -204,14 +193,11 @@ LEFT NAVIGATION BAR
     width:20%;
 }
 
+
 #left_nav ul
 {
     list-style-type:none;
     text-align:center;
-}
-
-#left_nav ul li
-{
 }
 
 #left_nav ul li a
@@ -221,13 +207,14 @@ LEFT NAVIGATION BAR
     background-color:grey;
     display:block;
     font-size:15px;
-
 }
 
 #left_nav ul li a:hover
 {
     color:rgb(255, 30, 30);
 }
+
+
 
 /*****************************************
 FOOTER
@@ -271,28 +258,16 @@ AMAZON
     text-align:center;
 }
 
-.amazonTable img
-{
-    
-}
 
 /***********************************
 FORMS
 ************************************/
 .formContactDiv
 {
-    margin:0 auto;
+    margin:30px auto;
     width:80%;
-
 }
 
-.formContact
-{
-}
-
-.formContactMessage
-{
-}
 
 /***************************
 ERRORS
@@ -300,20 +275,23 @@ ERRORS
 .errors
 {
     width:100%;
+    margin:0 auto;
 }
 
 .errors ul
 {
+    margin:20px 0;
     list-style-type:none;
 }
 
 .errors ul li
 {
     color:red;
-    margin:2% 0;
+    margin:10px 0;
     font-size:15px;
     text-align:center;
     font-weight:bold;
+
 }
 
 /******************************
@@ -327,7 +305,7 @@ FLASH MESSENGER
     border:1px green solid;
     border-radius:20px;
     width:90%;
-    margin:0 auto;
+    margin:5% auto;
 }
 
 /******************************
@@ -336,7 +314,28 @@ GUIDES
 .guideImage
 {
     width:30%;
-    height:30%;
+    height:150px;
     text-align:center;
+}
+
+.guideSpecTable
+{
+    margin:50px auto;
+}
+
+/********************************
+SOCIAL NETWORKS
+********************************/
+div .facebookLikeButtonDiv
+{
+    width:300px;
+    margin:20px auto;
+    
+}
+
+.facebookLikeButton
+{
+    height:25px;
+    width:100%;
 }
 
