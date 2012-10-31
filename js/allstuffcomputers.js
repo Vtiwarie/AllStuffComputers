@@ -6,6 +6,7 @@
 
 $(document).ready(function(){
     headerDisplay();
- 
+    
+    document.getElementById('formContact').onsubmit = validateContactForm;
     
 });

@@ -6,7 +6,6 @@
 *****************************************/
 
 
-
 /****************************************
 CSS LAYOUT
 *****************************************/
@@ -60,6 +59,11 @@ h4
 html, body
 {
     background-color:white;
+}
+
+input:focus, textarea:focus
+{
+    background-color:lightgrey;
 }
 
 #container
@@ -268,10 +272,22 @@ FORMS
     width:80%;
 }
 
+.formContactDiv input, textarea
+{
+    max-width:70%;
+    max-height:300px;
+}
+
 
 /***************************
 ERRORS
 ***************************/
+.error
+{
+    display:inline;
+    color:red;
+}
+
 .errors
 {
     width:100%;
@@ -305,7 +321,7 @@ FLASH MESSENGER
     border:1px green solid;
     border-radius:20px;
     width:90%;
-    margin:5% auto;
+    margin:30px auto;
 }
 
 /******************************

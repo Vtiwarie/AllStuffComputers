@@ -26,57 +26,7 @@ var computers = {
     }
         
 };
-/*
-function headerDisplay()
-{
-    var computers = ['Laptops', 'Desktops', 'Tablets', 'Hard Drives', 'Monitors', 'Printers', 'Routers'];
-    computers.sort();
-    
-    var i=0;
 
-    for(var j=0; j<computers.length; j++)
-        clearImage(computers[j]);
-    addImageEffects(computers[i], 30000);
-
-    addText('computers', {
-        position: 'relative', 
-        fontWeight: 'normal', 
-        left: '20px',
-        bottom: '50%',
-        fontSize: '40px',
-        opacity: 0
-    });
-    addTextEffects('computers', computers[i], 3500);
-      
-    i++;
-    
-    setInterval(function()
-    {
-        if(i < 0 || i >= computers.length )
-        {
-            i=0;
-        }
-        for(var j=0; j<computers.length; j++)
-            clearImage(computers[j]);
-        addImageEffects(computers[i], 30000);
-
-        addText('computers', {
-            position: 'relative', 
-            fontWeight: 'normal', 
-            left: '20px',
-            bottom: '50%',
-            fontSize: '40px',
-            opacity: 0
-        });
-     
-        addTextEffects('computers', computers[i], 3500);
-        
-        i++;
-    }, 3500);
-    
-
-}
-*/
 
 function headerDisplay()
 {
@@ -124,6 +74,7 @@ function headerDisplay()
     
 
 }
+
 function addText(id, options)
 {
     var span;
