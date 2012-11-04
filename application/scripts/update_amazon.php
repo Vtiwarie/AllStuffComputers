@@ -29,6 +29,10 @@ $productfilters = array('laptop'=>'NOTEBOOK_COMPUTER', 'desktop'=>'PERSONAL_COMP
 $search = new Custom_Service_Amazon();
 
 
+
+
+
+
 /////////////////////////////////////////START UPDATING//////////////////
 echo 'Which category to update?\n';
 print_r(array_keys($products));
@@ -94,6 +98,58 @@ foreach ($categoryArray as $manufacturer)
 }
 echo "finished processing {$category}s \n";
 
+/*
+$db->query('TRUNCATE TABLE amazonproducts');
+//truncate the database table;
+foreach($products as $key=>$value)
+{
+    $category = $key;
+    echo "updating {$key}s";
+    foreach($value as $manufacturer)
+    {
+        if($category == 'kindle')
+        {
+            $itemlist = $search->itemSearchAll(array('SearchIndex'=>'Electronics','Sort'=>'salesrank', 'Manufacturer'=>$manufacturer, 'Keywords'=>'amazon kindle', 'ResponseGroup'=>'Medium', 'AssociateTag'=>$amazonAssociateId), null, $productfilters[$category]);
+        }
+        else
+        {
+            $itemlist = $search->itemSearchAll(array('SearchIndex'=>'PCHardware','Sort'=>'salesrank', 'Manufacturer'=>$manufacturer, 'Keywords'=>$category, 'ResponseGroup'=>'Medium', 'AssociateTag'=>$amazonAssociateId), null, $productfilters[$category]);
+        }
+            foreach($itemlist as $item)
+            {
+                try
+                {
+            //$db->query("INSERT INTO amazonproducts (title, ASIN, manufacturer, category, formattedPrice, detailedUrl, small_image, medium_image, large_image, created) 
+            //               VALUES ('{$item->Title}', '{$item->ASIN}', '{$item->Manufacturer}', '{$category}', '{$item->FormattedPrice}', 'small', 'medium', 'large', NOW()");
 
+            $db->insert('amazonproducts', array('title'=>"$item->Title", 
+                                                'ASIN'=>"$item->ASIN",
+                                                'manufacturer'=>(isset($item->Manufacturer)) ? "$manufacturer":'',
+                                                'category'=>"$category", 
+                                                'formattedPrice'=>(isset($item->FormattedPrice)) ? "$item->FormattedPrice":'',
+                                                'detailedUrl'=>"$item->DetailPageURL",
+                                                'small_image'=>(isset($item->SmallImage->Url)) ? "{$item->SmallImage->Url}":'',
+                                                'medium_image'=>(isset($item->MediumImage->Url)) ? "{$item->MediumImage->Url}":'',
+                                                'large_image'=>(isset($item->LargeImage->Url)) ? "{$item->LargeImage->Url}":'', 
+                                                'created'=>date("Y-m-d H:i:s"))
+                );
+                sleep(1);
+
+                }
+                catch(Exception $e)
+                {
+                    echo $e->getMessage();
+                }
+
+            }
+        sleep(3);
+
+    }
+    sleep(2);
+}
+
+echo 'finished processing';
+ * /*
+ */
 
 ?>

@@ -1,14 +1,8 @@
-<form class="contactForm" method="<?php echo $this->element->getMethod();?>" action="<?php echo $this->element->getAction();?>">
+<form id="<?php echo $this->element->getId();?>" class="contactForm" method="<?php echo $this->element->getMethod();?>" action="<?php echo $this->element->getAction();?>">
 <pre>
-<b>Name:</b><?php echo $this->element->name;?>
-
-
-<b>Email:</b><?php echo $this->element->email;?>
-
-
-<b>Message:</b><?php echo $this->element->message; ?>
-
-
+<div><b>Name:</b><?php echo $this->element->name;?></div>
+<div><b>Email:</b><?php echo $this->element->email;?></div>
+<div><b>Message:</b><?php echo $this->element->message; ?></div>
 <?php echo $this->element->submit;?>
 </pre>
 </form>
