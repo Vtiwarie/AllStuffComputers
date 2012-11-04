@@ -1,5 +1,13 @@
 <?php
 
+/******************************************************************************
+ * AUTHOR: Vishaan Tiwarie
+ * 
+ * DESCRIPTION: Products controller creates, and maintains all Amazon products
+ * listed in the database
+ ******************************************************************************/
+
+
 class ProductsController extends Zend_Controller_Action
 {
 
@@ -8,7 +16,6 @@ class ProductsController extends Zend_Controller_Action
         $this->amazonAssociateId = Zend_Registry::get('config')->amazon->associate_id;
 
     }
-
 
     public function laptopsAction()
     {
